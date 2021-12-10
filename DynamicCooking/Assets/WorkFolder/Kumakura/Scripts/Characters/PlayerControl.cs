@@ -72,7 +72,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || gyroPosition.y < -5 || nums[1])
         {
             body.AddForce(Vector3.left * 0.25f);
-            if (currentYAngle <= maxAngle)
+            if (currentZAngle <= maxAngle)
             {
                 transform.Rotate(new Vector3(0, 0, moveSpeed));
             }
@@ -96,7 +96,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || gyroPosition.y > 5 || nums[3])
         {
             body.AddForce(Vector3.right * 0.25f);
-            if (currentYAngle > minAngle)
+            if (currentZAngle > minAngle)
             {
                 transform.Rotate(new Vector3(0, 0, -moveSpeed));
             }
@@ -105,6 +105,9 @@ public class PlayerControl : MonoBehaviour
         //aaa.text = gyroPosition.x.ToString();
         //bbb.text = gyroPosition.y.ToString();
         //ccc.text = gyroPosition.z.ToString();
+
+
+
     }
 
 
